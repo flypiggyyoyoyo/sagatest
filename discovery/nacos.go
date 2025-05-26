@@ -14,22 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.seata.server.cluster.raft.execute.vgroup;
 
-import org.apache.seata.server.cluster.raft.execute.AbstractRaftMsgExecute;
-import org.apache.seata.server.cluster.raft.sync.msg.RaftBaseMsg;
-import org.apache.seata.server.cluster.raft.sync.msg.RaftVGroupSyncMsg;
-import org.apache.seata.server.storage.raft.store.RaftVGroupMappingStoreManager;
+package discovery
 
-/**
- */
-public class VGroupAddExecute extends AbstractRaftMsgExecute {
+type NacosRegistryService struct{}
 
-    @Override
-    public Boolean execute(RaftBaseMsg syncMsg) throws Throwable {
-        RaftVGroupSyncMsg vGroupSyncMsg = (RaftVGroupSyncMsg)syncMsg;
-        ((RaftVGroupMappingStoreManager)raftVGroupMappingStoreManager).localAddVGroup(vGroupSyncMsg.getMappingDO());
-        return true;
-    }
+func (s *NacosRegistryService) Lookup(key string) ([]*ServiceInstance, error) {
+	//TODO implement me
+	panic("implement me")
+}
 
+func (NacosRegistryService) Close() {
+	//TODO implement me
+	panic("implement me")
 }

@@ -14,21 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.seata.server.cluster.raft.execute;
 
-import org.apache.seata.server.cluster.raft.sync.msg.RaftBaseMsg;
+package discovery
 
-/**
- */
-public interface RaftMsgExecute<T> {
+type SofaRegistryService struct{}
 
-    /**
-     * Execute t.
-     *
-     * @param syncMsg the sessionSyncMsg
-     * @return the t
-     * @throws Throwable the throwable
-     */
-    T execute(RaftBaseMsg syncMsg) throws Throwable;
+func (s *SofaRegistryService) Lookup(key string) ([]*ServiceInstance, error) {
+	//TODO implement me
+	panic("implement me")
+}
 
+func (s *SofaRegistryService) Close() {
+	//TODO implement me
+	panic("implement me")
 }

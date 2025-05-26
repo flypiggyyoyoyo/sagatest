@@ -14,24 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.seata.server.cluster.raft.execute;
 
-import org.apache.seata.server.session.SessionHolder;
-import org.apache.seata.server.store.VGroupMappingStoreManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package discovery
 
-import org.apache.seata.server.lock.LockerManagerFactory;
-import org.apache.seata.server.storage.raft.lock.RaftLockManager;
+type ZkRegistryService struct{}
 
-/**
- */
-public abstract class AbstractRaftMsgExecute implements RaftMsgExecute<Boolean> {
+func (s *ZkRegistryService) Lookup(key string) ([]*ServiceInstance, error) {
+	//TODO implement me
+	panic("implement me")
+}
 
-    protected final Logger logger = LoggerFactory.getLogger(getClass());
-
-    protected RaftLockManager raftLockManager = (RaftLockManager)LockerManagerFactory.getLockManager();
-
-    protected VGroupMappingStoreManager raftVGroupMappingStoreManager = SessionHolder.getRootVGroupMappingManager();
-
+func (s *ZkRegistryService) Close() {
+	//TODO implement me
+	panic("implement me")
 }

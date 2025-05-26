@@ -14,22 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.seata.server.cluster.raft.execute.vgroup;
 
-import org.apache.seata.server.cluster.raft.execute.AbstractRaftMsgExecute;
-import org.apache.seata.server.cluster.raft.sync.msg.RaftBaseMsg;
-import org.apache.seata.server.cluster.raft.sync.msg.RaftVGroupSyncMsg;
-import org.apache.seata.server.storage.raft.store.RaftVGroupMappingStoreManager;
+package discovery
 
-/**
- */
-public class VGroupRemoveExecute extends AbstractRaftMsgExecute {
+type ConsulRegistryService struct{}
 
-    @Override
-    public Boolean execute(RaftBaseMsg syncMsg) throws Throwable {
-        RaftVGroupSyncMsg vGroupSyncMsg = (RaftVGroupSyncMsg)syncMsg;
-        ((RaftVGroupMappingStoreManager)raftVGroupMappingStoreManager).localRemoveVGroup(vGroupSyncMsg.getMappingDO().getVGroup());
-        return true;
-    }
+func (s *ConsulRegistryService) Lookup(key string) ([]*ServiceInstance, error) {
+	//TODO implement me
+	panic("implement me")
+}
 
+func (s *ConsulRegistryService) Close() {
+	//TODO implement me
+	panic("implement me")
 }
