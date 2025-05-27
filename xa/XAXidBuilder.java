@@ -14,17 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.apache.seata.rm.datasource.xa;
 
-package discovery
+/**
+ * XA-Xid builder.
+ *
+ */
+public class XAXidBuilder {
 
-type SofaRegistryService struct{}
+    private XAXidBuilder() {
+    }
 
-func (s *SofaRegistryService) Lookup(key string) ([]*ServiceInstance, error) {
-	//TODO implement me
-	panic("implement me")
-}
+    public static final XAXid build(String xid, long branchId) {
+        return new XABranchXid(xid, branchId);
+    }
 
-func (s *SofaRegistryService) Close() {
-	//TODO implement me
-	panic("implement me")
+    public static final XAXid build(byte[] globalTransactionId, byte[] branchQualifier) {
+        return new XABranchXid(globalTransactionId, branchQualifier);
+    }
 }

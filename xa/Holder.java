@@ -14,17 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.apache.seata.rm.datasource.xa;
 
-package discovery
+public interface Holder<T extends Holdable> {
 
-type ZkRegistryService struct{}
+    T hold(String key, T value);
 
-func (s *ZkRegistryService) Lookup(key string) ([]*ServiceInstance, error) {
-	//TODO implement me
-	panic("implement me")
-}
+    T release(String key, T value);
 
-func (s *ZkRegistryService) Close() {
-	//TODO implement me
-	panic("implement me")
+    T lookup(String key);
 }

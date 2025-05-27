@@ -14,17 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.apache.seata.rm.datasource.xa;
 
-package discovery
+public interface Holdable {
 
-type ConsulRegistryService struct{}
+    void setHeld(boolean held);
 
-func (s *ConsulRegistryService) Lookup(key string) ([]*ServiceInstance, error) {
-	//TODO implement me
-	panic("implement me")
-}
+    boolean isHeld();
 
-func (s *ConsulRegistryService) Close() {
-	//TODO implement me
-	panic("implement me")
+    boolean shouldBeHeld();
 }

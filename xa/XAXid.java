@@ -14,17 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.apache.seata.rm.datasource.xa;
 
-package discovery
+import javax.transaction.xa.Xid;
 
-type NacosRegistryService struct{}
+/**
+ * Seata XA Mode defined XA-Xid.
+ *
+ */
+public interface XAXid extends Xid {
 
-func (s *NacosRegistryService) Lookup(key string) ([]*ServiceInstance, error) {
-	//TODO implement me
-	panic("implement me")
-}
+    String getGlobalXid();
 
-func (NacosRegistryService) Close() {
-	//TODO implement me
-	panic("implement me")
+    long getBranchId();
 }
