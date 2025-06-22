@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>妙码概览 - 妙码生花</title>
+    <link rel="stylesheet" href="overview-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>妙码生花</h1>
+                <span class="subtitle">MiaoMa</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="index.html" class="nav-link">返回首页</a>
+                    <a href="#home" class="nav-link">概览首页</a>
+                    <a href="#features" class="nav-link">特性</a>
+                    <a href="#quickstart" class="nav-link">快速开始</a>
+                    <a href="#community" class="nav-link">社区</a>
+                    <a href="https://github.com/miaoma/miaoma" class="nav-link" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main>
+        <!-- 英雄区域 -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">妙码生花</span>
+                    </h1>
+                    <p class="hero-subtitle">妙若天成，码到成功</p>
+                    <p class="hero-description">
+                        妙码（MiaoMa）是一款全新的全栈代码自动生成工具，以数据库表结构为核心，
+                        通过多语言、多框架的映射转换和模板渲染，实现从数据库设计到代码开发的一站式自动化流程。
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#quickstart" class="btn btn-primary">快速开始</a>
+                        <a href="https://github.com/miaoma/miaoma" class="btn btn-secondary" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                    <div class="hero-badges">
+                        <img src="https://img.shields.io/pypi/pyversions/miaoma.svg" alt="Python Version">
+                        <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <span class="code-title">妙码生成示例</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code># 解析SQL
+python miaoma.py parse-sql t_miaoma_student
+
+# 生成配置
+python miaoma.py gen-config t_miaoma_student
+
+# 生成代码
+python miaoma.py gen-code t_miaoma_student --template springboot3</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特性区域 -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">核心特性</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>文档 + 测试 + AI驱动</h3>
+                        <p>文档先行，测试保障，AI赋能，确保代码质量和可维护性</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI First设计</h3>
+                        <p>目录即语义，注释即文档，代码即意图，智能化开发体验</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>配置驱动</h3>
+                        <p>统一的配置结构，多语言多框架支持，灵活适配各种技术栈</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>代码分层</h3>
+                        <p>自动生成层、自定义层、共享层，清晰的架构设计</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>增量更新</h3>
+                        <p>智能代码合并，自定义代码保护，无缝升级体验</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>妙不可言</h3>
+                        <p>AI的创造力是无限的，能带来妙不可言的惊喜</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 快速开始 -->
+        <section id="quickstart" class="quickstart">
+            <div class="container">
+                <h2 class="section-title">快速开始</h2>
+                <div class="quickstart-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>安装妙码</h3>
+                            <div class="code-block">
+                                <code>pip install miaoma</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>解析SQL</h3>
+                            <div class="code-block">
+                                <code>python miaoma.py parse-sql t_miaoma_student</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>生成代码</h3>
+                            <div class="code-block">
+                                <code>python miaoma.py gen-code t_miaoma_student --template springboot3</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术栈 -->
+        <section id="tech-stack" class="tech-stack">
+            <div class="container">
+                <h2 class="section-title">支持的技术栈</h2>
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h3>后端框架</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Java + Spring Boot</span>
+                            <span class="tech-item">Node.js + Express</span>
+                            <span class="tech-item">Python + FastAPI</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>前端框架</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">TypeScript + Vue3</span>
+                            <span class="tech-item">React + Ant Design</span>
+                            <span class="tech-item">Angular + Material</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>数据库</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">MySQL</span>
+                            <span class="tech-item">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社区 -->
+        <section id="community" class="community">
+            <div class="container">
+                <h2 class="section-title">加入社区</h2>
+                <div class="community-links">
+                    <a href="https://miaoma.com" class="community-link" target="_blank">
+                        <i class="fas fa-home"></i>
+                        <span>官方网站</span>
+                    </a>
+                    <a href="https://docs.miaoma.com" class="community-link" target="_blank">
+                        <i class="fas fa-book"></i>
+                        <span>技术文档</span>
+                    </a>
+                    <a href="https://community.miaoma.com" class="community-link" target="_blank">
+                        <i class="fas fa-users"></i>
+                        <span>社区论坛</span>
+                    </a>
+                    <a href="https://ask.miaoma.com" class="community-link" target="_blank">
+                        <i class="fas fa-question-circle"></i>
+                        <span>问答中心</span>
+                    </a>
+                    <a href="https://market.miaoma.com" class="community-link" target="_blank">
+                        <i class="fas fa-store"></i>
+                        <span>模板市场</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>妙码生花</h3>
+                    <p>妙若天成，码到成功</p>
+                    <p>美妙绝伦，妙不可言</p>
+                </div>
+                <div class="footer-section">
+                    <h4>产品</h4>
+                    <ul>
+                        <li><a href="#features">核心特性</a></li>
+                        <li><a href="#quickstart">快速开始</a></li>
+                        <li><a href="https://docs.miaoma.com" target="_blank">文档中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>社区</h4>
+                    <ul>
+                        <li><a href="https://github.com/miaoma/miaoma" target="_blank">GitHub</a></li>
+                        <li><a href="https://community.miaoma.com" target="_blank">论坛</a></li>
+                        <li><a href="https://ask.miaoma.com" target="_blank">问答</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>资源</h4>
+                    <ul>
+                        <li><a href="https://market.miaoma.com" target="_blank">模板市场</a></li>
+                        <li><a href="#" target="_blank">示例项目</a></li>
+                        <li><a href="#" target="_blank">最佳实践</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 <a href="https://miaoma.com" target="_blank">miaoma.com</a> | 妙码让世界变得更美好</p>
+                    <p>通过结构化的信息增强人工智能的确定性，让代码生成更加智能、高效、可靠</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" target="_blank">隐私政策</a>
+                    <a href="#" target="_blank">服务条款</a>
+                    <a href="https://github.com/miaoma/miaoma/blob/main/LICENSE" target="_blank">MIT 许可证</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="overview-script.js"></script>
+</body>
+</html>
